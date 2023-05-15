@@ -45,10 +45,6 @@ body{
 }
 
 
-.container-slider{
-    /* align-items: end; */
-}
-
 .slider{
     /* bar: 60 / 3 = 20 */
     position: relative;
@@ -75,7 +71,7 @@ body{
   
     background-color: hsl(224, 36%, 15%);
     width: 35%;
-    height: 90px;
+    height: 100px;
     border-radius: 8px;
     margin: 15px;
     padding-bottom: 20px;
@@ -123,6 +119,10 @@ button{
     
 }
 
+button:hover {
+    background-color: white;
+  }
+
 .btn-key{
     display: block; /* Hace que el botón sea un elemento de bloque */
     width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
@@ -131,6 +131,7 @@ button{
     font-size: 32px;
     border: 0;
     border-radius: 10px;
+    background-color: hsl(30, 25%, 89%);
     border-bottom: 3px solid hsl(28, 16%, 65%);
     cursor:pointer;
 }
@@ -147,11 +148,19 @@ button{
     border-bottom: 3px solid hsl(224, 28%, 35%);
 }
 
+.tool:hover {
+    background-color: hsl(224,51%,76%);
+  }
+
 .btn-equal{
     color: hsl(0, 0%, 100%);
     background-color: hsl(6, 63%, 50%);
     border-bottom: 3px solid hsl(6, 70%, 34%);
 }
+
+.btn-equal:hover {
+    background-color: hsl(6,93%,67%);
+  }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
