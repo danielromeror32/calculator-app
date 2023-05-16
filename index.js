@@ -10,7 +10,7 @@ let commas = true;
 let commasCount = 3;
 
 const operators = ["+", "x", "-", "/"];
-
+let operator = [];
 
 $(".num").click(function(){
     while(init){
@@ -36,25 +36,55 @@ $(".num").click(function(){
 });
 
 
-$(".sum").click(function (){
-   setNumber.push(fullNumber);
-   console.log(setNumber);
-   fullNumber = "";
+$(".op").click(function (){
+
+    newSetNumber();
+
+    let getOperator = $(this).text();// - * / +
+    
+    operator.push(getOperator); // +
+    
 });
+
+$(".btn-equal").click(function(){
+    // setNumber[0]
+    // operator [0]
+    // setNumber [1]
+    let equal;
+    newSetNumber();
+    for (let index = 0; index < setNumber.length; index++) {
+        
+        if (setNumber.length > 0 ){
+            equal = setNumber[index] + operator[index] + setNumber[index + 1]
+            console.log("equal" + equal);
+        }else{
+            console.log(setNumber[index]);
+        }
+    }
+
+});
+
+function newSetNumber (){
+    setNumber.push(fullNumber);
+    fullNumber = "";
+}
+
+function add (){
+
+}
 
 
 $(".del").click(function () {
     fullNumber = fullNumber.slice(0, -1);
 
-    let word = screen.text();
-    let newValue;
-    let lastDigit = word.charAt(word.length-2);
+    // let word = screen.text();
+    // let lastDigit = word.charAt(word.length-2);
 
     // if(lastDigit === "."){
     //     commas = true;
     //      console.log(commasCount);
     // }   
-
+    let newValue;
     if (lastDigit === ","){
          newValue = screen.text().slice(0, -2);
          commasCount-=2;
@@ -77,7 +107,7 @@ $(".reset").click(function(){
 
 function addComma(number){
     // number = number.replaceAll(",", "");
-    
+
     let array = number.split("");
     
     if (array.length % 4 === 0){
