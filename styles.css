@@ -102,12 +102,6 @@ body{
     grid-auto-rows: 1fr;
 }
 
-
-div.key {
-    display: grid;
-    align-items: center;
-  }
-
 .key{
     background-color: hsl(225, 21%, 49%);
     margin: 10%;
@@ -116,20 +110,14 @@ div.key {
 }
 
 
-
-button{
-    color: hsl(224, 28%, 35%);
-    
-}
-
-button:hover {
-    background-color: white;
-  }
-
 .btn-key{
-    display: block; /* Hace que el botón sea un elemento de bloque */
-    width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
-    height: 100%;
+    display: block; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; 
+    height: 100%; */
+    color: hsl(224, 28%, 35%);
     font-family: 'League Spartan', sans-serif;
     font-size: 32px;
     border: 0;
@@ -138,7 +126,12 @@ button:hover {
     border-bottom: 3px solid hsl(28, 16%, 65%);
     cursor:pointer;
 }
-.keyButtom{
+
+.btn-key:hover {
+    background-color: white;
+}
+
+.buttom{
     grid-column: span 2;
     margin: 5%;
     border-radius: 10px;
