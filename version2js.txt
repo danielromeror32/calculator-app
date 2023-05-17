@@ -1,0 +1,161 @@
+
+const screen = $(".answers");
+
+let fullNumber = "";
+let setNumber = [];
+
+let init = true;
+
+let operator = [];
+
+
+
+$(".num").click(function(){
+    initfunction();
+    let getNumber = $(this).text(); // 1
+    fullNumber += getNumber;
+    
+    let onScreen = screen.text(fullNumber).text();
+    addComma(onScreen);
+   
+        
+});
+
+
+$(".op").click(function (){
+
+    newSetNumber();
+    
+    let getOperator = $(this).text();// - * / +
+    console.log(operator);
+    screen.text(getOperator);
+    operator.push(getOperator); // +
+    
+});
+
+$(".btn-equal").click(function(){
+    // setNumber[0]
+    // operator [0]
+    // setNumber [1]
+    let answer;
+    newSetNumber(); // set number [3 , 2]
+    // operator = [+ , -]
+    console.log(setNumber);
+    if (setNumber.length != 0) {
+        for (let index = 0; index < operator.length; index++) {
+            let fistNumber = parseFloat(setNumber[index]) // 3
+            let secondNumber = parseFloat(setNumber[index + 1]) // 2 
+            if(operator[index] === "+"){
+                answer = fistNumber + secondNumber; // 3+2=5, 
+                setNumber[index + 1] = answer; // [3 , 5 ]
+                // fullNumber = answer;
+                screen.text(answer);
+                //console.log(answer);
+            }
+            else if (operator[index] === "-"){
+                answer = (fistNumber) - (secondNumber); // 5 - 1 = 4
+                setNumber[index + 1] = answer; // [3, 5 , 4]
+                screen.text(answer);
+            }
+        }  
+    }else{
+        screen.text("0");
+    }
+
+
+    // for (let index = 0; index < setNumber.length - 1; index++) {
+    //     console.log(setNumber);
+    //     if (setNumber.length > 0 ){
+    //          // 1 
+    //         let opera = operator[index] // + 
+    //          // 2
+
+
+
+    //         console.log("equal " + equal + " opera: "+ opera+ " set " + set);
+    //     }else{
+    //         //console.log(setNumber[0]);
+    //     }
+    // }
+
+});
+
+function newSetNumber (){
+
+
+    // if (setNumber.length === 0){
+    //     fullNumber = 0;
+    // }
+    console.log(fullNumber);
+    if (fullNumber.length === 0){
+        operator.pop(); 
+    }else{
+        setNumber.push(fullNumber);
+    }
+   console.log(setNumber);
+    fullNumber = "";
+}
+
+
+
+$(".del").click(function () {
+    fullNumber = fullNumber.slice(0, -1);
+
+    let word = screen.text();
+    let lastDigit = word.charAt(word.length-2);
+
+    // if(lastDigit === "."){
+    //     commas = true;
+    //      console.log(commasCount);
+    // }   
+    let newValue;
+    if (lastDigit === ","){
+         newValue = screen.text().slice(0, -2);
+    }else{
+         newValue = screen.text().slice(0, -1);
+    }
+    screen.text(newValue);
+    
+});
+
+$(".reset").click(function(){
+    fullNumber = "";
+    setNumber = [];
+    operator = [];
+    init = true;
+    screen.text("0")
+});
+
+// function addComma(number){
+//     // number = number.replaceAll(",", "");
+
+//     let array = number.split("");
+    
+//     if (array.length % 4 === 0){
+        
+//         array.splice(commasCount, 0, ",");
+//         let comma = array.join(""); 
+//         screen.text(comma);
+//         commasCount+= 4;
+//         // console.log(commasCount);
+//     }
+// }
+function addComma(number){
+    // number = number.replaceAll(",", "");
+
+    let array = number.split("");
+    
+    if (array.length % 4 === 0){
+        array.splice(3, 0, ",");
+        let comma = array.join(""); 
+        screen.text(comma);
+    }
+}
+  
+
+function initfunction (){
+    while(init){
+        screen.text("");
+        init = false;
+    };
+}
