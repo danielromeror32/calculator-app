@@ -101,19 +101,22 @@ body{
     grid-template-columns:1fr 1fr 1fr 1fr ;
     grid-auto-rows: 1fr;
 }
+
+
 div.key {
     display: grid;
-    /* justify-content: center; */
     align-items: center;
   }
 
 .key{
     background-color: hsl(225, 21%, 49%);
-    
     margin: 10%;
     border-radius: 10px;
     
 }
+
+
+
 button{
     color: hsl(224, 28%, 35%);
     
@@ -161,6 +164,13 @@ button:hover {
 .btn-equal:hover {
     background-color: hsl(6,93%,67%);
   }
+
+.pressed {
+box-shadow: 0 0 5px ;
+background-color: grey;
+}
+  
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

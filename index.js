@@ -4,8 +4,9 @@ let onScreen = "";
 
 $(".num").click(function(){
     getNumber = $(this).text();    
+    let number = $(this).attr('id');
     onScreen = screen.text(screen.text() + getNumber).text();
-
+    animatePress(number);
 });
 
 $(".btn-equal").click(function(){
@@ -28,3 +29,10 @@ $(".reset").click(function(){
     screen.text("");
 });
 
+function animatePress(currentColour){
+    $("#"+ currentColour).addClass("pressed")
+
+    setTimeout(function(){
+    $("#"+ currentColour).removeClass("pressed")
+     }, 100);
+}
