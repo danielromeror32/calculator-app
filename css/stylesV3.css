@@ -1,0 +1,52 @@
+body{
+    background-color: hsl(268, 75%, 9%);
+    color: hsl(52, 100%, 62%);
+}
+
+.screen{
+    background-color: hsl(268, 71%, 12%);
+}
+
+.slider{
+    background-color: hsl(268, 71%, 12%);
+}
+
+.inside-slider{
+    background-color: hsl(176, 100%, 44%);
+    margin-left: 50px;
+}
+
+.inside-slider:hover{
+    background-color: hsl(177,100%,79%);
+}
+
+.keys{
+    background-color: hsl(268, 71%, 12%);
+    
+}
+
+.btn-key{
+    color: hsl(52, 100%, 62%);
+   background-color: hsl(268, 47%, 21%);
+   border-bottom: 3px solid hsl(285, 91%, 52%);
+}
+
+.btn-key:hover {
+    background-color: hsl(267,54%,44%);
+}
+.tool{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(290, 70%, 36%);
+    border-bottom: 3px solid hsl(285, 91%, 52%);
+}
+.tool:hover {
+    background-color: hsl(280,56%,44%);
+  }
+  .btn-equal{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(176, 100%, 44%);
+    border-bottom: 3px solid hsl(177, 92%, 70%);
+}
+.btn-equal:hover, .inside-slider:hover {
+    background-color: hsl(177,100%,79%);
+  }
