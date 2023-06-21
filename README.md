@@ -19,5 +19,5 @@ El diseño debe ser responsivo, compatible tanto para computadoras como para dis
 ## Feactures 
 Herramientas
 - JavaScript 
-- EJS
+- jquery
 - CSS
