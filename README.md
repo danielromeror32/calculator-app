@@ -12,6 +12,12 @@ Thanks for checking out this front-end coding challenge.
 
 ## The challenge
 
-Your challenge is to build out this calculator app and get it looking as close to the design as possible.
-Additionally, basic calculator functionalities were added.
-The design must be responsive, compatible for both computers and mobile devices, and it should include three visual themes.
+# Calculator App
+Desarrollo de una aplicación de calculadora 
+Con funcionalidades básicas de calculadora.
+El diseño debe ser responsivo, compatible tanto para computadoras como para dispositivos móviles, y debe incluir tres temas visuales.
+## Feactures 
+Herramientas
+- JavaScript 
+- EJS
+- CSS
